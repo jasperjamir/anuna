@@ -117,7 +117,7 @@ export function WaitlistForm() {
             <FormItem className="flex-1">
               <FormControl>
                 <Input
-                  placeholder="Enter your email"
+                  placeholder="Ilagay ang email."
                   type="email"
                   autoComplete="email"
                   className="h-11 rounded-md"
@@ -142,7 +142,7 @@ export function WaitlistForm() {
               Joining...
             </>
           ) : (
-            "Join Waitlist"
+            "Sumali."
           )}
         </Button>
       </motion.form>

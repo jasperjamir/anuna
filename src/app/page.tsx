@@ -10,10 +10,10 @@ export default function Home() {
     <div className="flex flex-col h-screen justify-center items-center text-center">
       <div className="mb-8">
         <SplitText className="text-5xl tracking-tighter font-medium">
-          Get early access
+          Anu na?
         </SplitText>
         <SplitText className="tracking-tight text-xl">
-          Be amongst the first to experience our services.
+          Mag-sign-up at ma-remind ng mga national issues na lagi naging nalilimutan.
         </SplitText>
       </div>
       <WaitlistForm />
