@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col h-screen justify-center items-center text-center">
       <div className="mb-8">
         <SplitText className="text-5xl tracking-tighter font-medium">
-          Anu na?
+          Anuna?
         </SplitText>
         <SplitText className="tracking-tight text-xl">
           Mag-sign-up at ma-remind ng mga national issues na lagi naging nalilimutan.
