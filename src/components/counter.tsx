@@ -56,7 +56,7 @@ export function Counter() {
       initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 2, type: "spring" }}
-      className="text-sm text-muted-foreground"
+      className="text-sm text-black"
       aria-live="polite"
     >
       Sumama <span className="font-bold">{count.toLocaleString()}</span>+ Pilipino
