@@ -10,16 +10,29 @@ export default function Home() {
     <div className="flex flex-col h-screen justify-center items-center text-center">
       <div className="mb-8">
         <SplitText className="text-5xl tracking-tighter font-medium">
-          Anuna?
+          Anuna!?
         </SplitText>
         <SplitText className="tracking-tight text-xl">
-          Mag-sign-up at ma-remind ng mga national issues na lagi naging nalilimutan.
+        Sumali para lagi kang may paalala sa mga national issues na madalas nakakalimutan.
         </SplitText>
       </div>
       <WaitlistForm />
       <div className="mt-4">
         <Counter />
       </div>
+      
+      {/* Sample Email Section */}
+      <div className="mt-8 max-w-md">
+        <h3 className="tracking-tight text-xl mb-4">
+          Sample Email na matatanggap mo:
+        </h3>
+        <img 
+          src="/email-screenshot.png" 
+          alt="Sample email screenshot" 
+          className="w-full h-auto rounded-lg shadow-lg border-2 border-gray-300"
+        />
+      </div>
+      
       <footer className="sticky top-[100vh]">
         <Button size="icon" variant="ghost">
           <Link href="https://github.com/zeitgg/zeitlist" target="_blank">

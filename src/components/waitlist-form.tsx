@@ -120,7 +120,7 @@ export function WaitlistForm() {
                   placeholder="Ilagay ang email."
                   type="email"
                   autoComplete="email"
-                  className="h-11 rounded-md"
+                  className="h-12 rounded-md bg-yellow-200 border-yellow-300 text-gray-800 placeholder-gray-600 focus:bg-yellow-100 focus:border-yellow-400"
                   aria-label="Email address for waitlist"
                   aria-invalid={!!form.formState.errors.email}
                   {...field}
@@ -133,7 +133,7 @@ export function WaitlistForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="h-11 shrink-0 rounded-md px-6 font-medium"
+          className="h-12 shrink-0 rounded-md px-6 font-medium bg-yellow-200 hover:bg-yellow-100 text-gray-800 border-yellow-300"
           aria-live="polite"
         >
           {isSubmitting ? (
