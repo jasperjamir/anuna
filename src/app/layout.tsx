@@ -17,6 +17,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Anuna",
   description: "Anuna?!",
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+  },
+  openGraph: {
+    title: "Anuna",
+    description: "Anuna?!",
+    type: "website",
+    robots: "noindex, nofollow, noarchive, nosnippet, noimageindex",
+  },
+  twitter: {
+    card: "summary",
+    title: "Anuna",
+    description: "Anuna?!",
+  },
 };
 
 export default function RootLayout({

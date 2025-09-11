@@ -1,8 +1,6 @@
-# Zeitlist
+# Anuna!?
 
-this is a waitlist app. it uses redis. and arcjet to validate emails.
-
-![](zeitlist.gif)
+To remind us of national issues.
 
 ## Core Functionality
 
