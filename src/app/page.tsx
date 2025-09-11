@@ -14,7 +14,7 @@ export default function Home() {
       }}
     >
       <div className="mb-8">
-        <SplitText className="text-5xl tracking-tighter font-medium text-black">
+        <SplitText className="text-9xl tracking-tighter font-bold text-black">
           Anuna!?
         </SplitText>
         <SplitText className="tracking-tight text-xl text-black">
