@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     title: "Anuna",
     description: "Anuna?!",
     type: "website",
-    robots: "noindex, nofollow, noarchive, nosnippet, noimageindex",
   },
   twitter: {
     card: "summary",
