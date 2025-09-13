@@ -105,7 +105,7 @@ export function WaitlistForm() {
     <Form {...form}>
       <motion.form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="relative flex w-full max-w-md flex-col gap-3 sm:flex-row"
+        className="relative flex w-4/5 max-w-md flex-col gap-3 sm:flex-row"
         initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 2, type: "spring" }}
@@ -120,7 +120,7 @@ export function WaitlistForm() {
                   placeholder="Ilagay ang email."
                   type="email"
                   autoComplete="email"
-                  className="h-12 rounded-md bg-yellow-200 border-yellow-300 text-gray-800 placeholder-gray-800 focus:bg-yellow-100 focus:border-yellow-400 !bg-yellow-200"
+                  className="h-12 rounded-md bg-amber-300 border-amber-400 text-gray-800 placeholder-gray-800 focus:bg-amber-200 focus:border-amber-500 !bg-amber-300"
                   aria-label="Email address for waitlist"
                   aria-invalid={!!form.formState.errors.email}
                   {...field}
@@ -133,7 +133,7 @@ export function WaitlistForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="h-12 shrink-0 rounded-md px-6 font-medium bg-yellow-200 hover:bg-yellow-100 text-gray-800 border-yellow-300"
+          className="h-12 shrink-0 rounded-md px-6 font-medium bg-amber-300 hover:bg-amber-200 text-gray-800 border-amber-400"
           aria-live="polite"
         >
           {isSubmitting ? (

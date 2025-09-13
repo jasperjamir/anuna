@@ -14,7 +14,7 @@ export default function Home() {
       }}
     >
       <div className="mb-8">
-        <SplitText className="text-9xl tracking-tighter font-bold text-black">
+        <SplitText className="text-8xl tracking-tighter font-bold text-black">
           Anuna!?
         </SplitText>
         <SplitText className="tracking-tight text-xl text-black">
@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       
       {/* Sample Email Section */}
-      <div className="mt-8 max-w-md">
+      <div className="mt-8 w-4/5 max-w-md">
         <h3 className="tracking-tight text-xl mb-4 text-black">
           Sample Email na matatanggap mo:
         </h3>
