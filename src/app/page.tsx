@@ -13,11 +13,14 @@ export default function Home() {
         backgroundImage: `url('/anuna-bg.jpg')`
       }}
     >
-      <div className="mb-8">
-        <SplitText className="text-8xl tracking-tighter font-bold text-black">
+      <div 
+        className="mb-8 rounded-2xl p-8 shadow-xl max-w-4xl mx-auto"
+        style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
+      >
+        <SplitText className="text-8xl tracking-tighter font-bold text-gray-800">
           Anuna!?
         </SplitText>
-        <SplitText className="tracking-tight text-xl text-black">
+        <SplitText className="tracking-tight text-xl text-gray-800">
         Sumali para lagi kang may paalala sa mga national issues na madalas nakakalimutan.
         </SplitText>
       </div>
@@ -27,8 +30,11 @@ export default function Home() {
       </div>
       
       {/* Sample Email Section */}
-      <div className="mt-8 w-4/5 max-w-md">
-        <h3 className="tracking-tight text-xl mb-4 text-black">
+      <div 
+        className="mt-8 w-4/5 max-w-md rounded-2xl p-6 shadow-xl"
+        style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
+      >
+        <h3 className="tracking-tight text-xl mb-4 text-gray-800">
           Sample Email na matatanggap mo:
         </h3>
         <img 

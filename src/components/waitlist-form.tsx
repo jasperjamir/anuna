@@ -120,7 +120,7 @@ export function WaitlistForm() {
                   placeholder="Ilagay ang email."
                   type="email"
                   autoComplete="email"
-                  className="h-12 rounded-md bg-amber-300 border-amber-400 text-gray-800 placeholder-gray-800 focus:bg-amber-200 focus:border-amber-500 !bg-amber-300"
+                  className="h-12 rounded-md bg-white border-amber-400 text-gray-800 placeholder-gray-800 focus:bg-white focus:border-amber-500 !bg-white"
                   aria-label="Email address for waitlist"
                   aria-invalid={!!form.formState.errors.email}
                   {...field}

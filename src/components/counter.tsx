@@ -56,10 +56,10 @@ export function Counter() {
       initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 2, type: "spring" }}
-      className="text-sm text-black"
+      className="text-sm text-gray-800"
       aria-live="polite"
     >
-      Sumama <span className="font-bold">{count.toLocaleString()}</span>+ Pilipino
+      Sumama sa <span className="font-bold">{count.toLocaleString()}</span>+ Pilipino
       na hindi na makakalimot.
     </motion.p>
   );
