@@ -17,7 +17,7 @@ export default function Home() {
         className="mb-8 rounded-2xl p-8 shadow-xl max-w-4xl mx-auto"
         style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
       >
-        <SplitText className="text-8xl tracking-tighter font-bold text-gray-800">
+        <SplitText className="text-7xl tracking-tighter font-bold text-gray-800">
           Anuna!?
         </SplitText>
         <SplitText className="tracking-tight text-xl text-gray-800">
