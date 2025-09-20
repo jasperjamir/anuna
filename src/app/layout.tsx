@@ -28,11 +28,20 @@ export const metadata: Metadata = {
     title: "Anuna",
     description: "Anuna?!",
     type: "website",
+    images: [
+      {
+        url: "/vercel_thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Anuna - Waitlist for National Issues Reminders",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Anuna",
     description: "Anuna?!",
+    images: ["/vercel_thumbnail.png"],
   },
 };
 
