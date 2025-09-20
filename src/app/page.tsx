@@ -14,10 +14,10 @@ export default function Home() {
       }}
     >
 
-      <SplitText className="text-7xl tracking-tighter font-bold text-[#ffda47]">
+      <SplitText className="text-8xl tracking-tighter font-bold text-[#ffda47] mb-2">
         anuna?!
       </SplitText>
-      <SplitText className="tracking-tight text-l text-[#ffffff]">
+      <SplitText className="tracking-tight text-xl text-[#ffffff] mb-6">
       Sumali para lagi kang may paalala sa mga national issues na madalas nakakalimutan.
       </SplitText>
       <WaitlistForm />
@@ -29,7 +29,7 @@ export default function Home() {
       <div 
         className="mt-8 w-full max-w-md rounded-2xl p-6 shadow-xl"
       >
-        <h3 className="tracking-tight text-xl mb-4 text-[#ffffff]">
+        <h3 className="tracking-tight text-xl mb-2 text-[#ffffff] font-bold">
           Sample Email na matatanggap mo:
         </h3>
         <img 
