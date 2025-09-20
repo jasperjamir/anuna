@@ -71,7 +71,7 @@ export default function Home() {
       
       <footer className="sticky top-[100vh]">
         <Button size="icon" variant="ghost">
-          <Link href="https://github.com/zeitgg/zeitlist" target="_blank">
+          <Link href="https://github.com/jasperjamir/anuna/" target="_blank">
             <FaGithub />
           </Link>
         </Button>
