@@ -1,41 +1,49 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import * as motion from "motion/react-client";
 
-export function Counter() {
+export interface CounterRef {
+  refetchCount: () => Promise<void>;
+}
+
+export const Counter = forwardRef<CounterRef>((props, ref) => {
   const [count, setCount] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchCount = async () => {
-      setIsLoading(true);
-      setError(null);
-      try {
-        const response = await fetch("/api/waitlist/count");
-        if (!response.ok) {
-          throw new Error(
-            `Failed to fetch count: ${response.status} ${response.statusText}`
-          );
-        }
-        const data = await response.json();
-
-        if (typeof data.count !== "number") {
-          throw new Error("Invalid count received from API");
-        }
-
-        setCount(data.count);
-      } catch (err) {
-        console.error("Error fetching waitlist count:", err);
-        setError(
-          err instanceof Error ? err.message : "An unknown error occurred"
+  const fetchCount = async () => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const response = await fetch("/api/waitlist/count");
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch count: ${response.status} ${response.statusText}`
         );
-        setCount(null);
-      } finally {
-        setIsLoading(false);
       }
-    };
+      const data = await response.json();
 
+      if (typeof data.count !== "number") {
+        throw new Error("Invalid count received from API");
+      }
+
+      setCount(data.count);
+    } catch (err) {
+      console.error("Error fetching waitlist count:", err);
+      setError(
+        err instanceof Error ? err.message : "An unknown error occurred"
+      );
+      setCount(null);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useImperativeHandle(ref, () => ({
+    refetchCount: fetchCount,
+  }));
+
+  useEffect(() => {
     fetchCount();
   }, []);
 
@@ -62,4 +70,4 @@ export function Counter() {
       Kasama mo ang <span className="font-bold">{count.toLocaleString()}</span>+ Pilipinong hindi na makakalimot.
     </motion.p>
   );
-}
+});

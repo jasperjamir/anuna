@@ -1,11 +1,21 @@
-import { Counter } from "@/components/counter";
+"use client";
+import { Counter, CounterRef } from "@/components/counter";
 import { Button } from "@/components/ui/button";
 import SplitText from "@/components/ui/split-text";
 import { WaitlistForm } from "@/components/waitlist-form";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import { useRef } from "react";
 
 export default function Home() {
+  const counterRef = useRef<CounterRef>(null);
+
+  const handleWaitlistSuccess = async () => {
+    // Refetch counter when someone successfully joins the waitlist
+    if (counterRef.current) {
+      await counterRef.current.refetchCount();
+    }
+  };
   return (
     <div 
       className="flex flex-col h-screen justify-center items-center text-center bg-cover bg-center bg-no-repeat"
@@ -20,9 +30,9 @@ export default function Home() {
       <SplitText className="tracking-tight text-xl text-[#ffffff] mb-6">
       Sumali para lagi kang may paalala sa mga national issues na madalas nakakalimutan.
       </SplitText>
-      <WaitlistForm />
+      <WaitlistForm onSuccess={handleWaitlistSuccess} />
       <div className="mt-4">
-        <Counter />
+        <Counter ref={counterRef} />
       </div>
       
       {/* Sample Email Section */}

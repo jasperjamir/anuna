@@ -25,7 +25,11 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export function WaitlistForm() {
+interface WaitlistFormProps {
+  onSuccess?: () => void;
+}
+
+export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<FormValues>({
@@ -90,6 +94,11 @@ export function WaitlistForm() {
           "Successfully joined the waitlist!"
       );
       form.reset();
+      
+      // Call onSuccess callback to refetch counter
+      if (onSuccess) {
+        onSuccess();
+      }
     } catch (error) {
       toast.error(
         error instanceof Error
